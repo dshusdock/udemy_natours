@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 3rem;
+
 }
 
 
@@ -25,6 +25,11 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
     /* animation-delay: 3s; 
      animation-iteration-count: 3;
      */
@@ -36,6 +41,11 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
     animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
+
   }
 }
 
@@ -50,6 +60,14 @@ body {
   letter-spacing: 2px;
   transition: all .2s;
 
+  @include respond(tab-port) {
+    font-size: 3.0rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
@@ -58,7 +76,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size:  $default-font-size;
+  font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -70,4 +88,3 @@ body {
     margin-bottom: 3rem;
   }
 }
-
